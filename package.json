@@ -1,0 +1,94 @@
+{
+  "name": "@tokenlabai/openclaw-provider",
+  "version": "0.1.0",
+  "description": "TokenLab model provider plugin for OpenClaw with live model catalog discovery.",
+  "type": "module",
+  "license": "MIT",
+  "author": "TokenLab <cryptoninja2008@gmail.com>",
+  "homepage": "https://tokenlab.sh",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hedging8563/tokenlab-openclaw-provider.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hedging8563/tokenlab-openclaw-provider/issues"
+  },
+  "keywords": [
+    "openclaw",
+    "tokenlab",
+    "llm",
+    "model-provider",
+    "openai-compatible"
+  ],
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "files": [
+    "dist",
+    "api.ts",
+    "index.ts",
+    "models.ts",
+    "onboard.ts",
+    "provider-catalog.ts",
+    "openclaw.plugin.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./api": {
+      "types": "./dist/api.d.ts",
+      "default": "./dist/api.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "npm run build && npm test && npm pack --dry-run",
+    "test": "vitest run",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "openclaw": ">=2026.6.11 <2027"
+  },
+  "devDependencies": {
+    "openclaw": "2026.6.11",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "openclaw": {
+    "extensions": [
+      "./index.ts"
+    ],
+    "runtimeExtensions": [
+      "./dist/index.js"
+    ],
+    "providers": [
+      "tokenlab"
+    ],
+    "install": {
+      "clawhubSpec": "clawhub:@tokenlabai/openclaw-provider",
+      "npmSpec": "@tokenlabai/openclaw-provider",
+      "defaultChoice": "npm",
+      "minHostVersion": ">=2026.6.11"
+    },
+    "compat": {
+      "pluginApi": ">=2026.6.11",
+      "minGatewayVersion": "2026.6.11"
+    },
+    "build": {
+      "openclawVersion": "2026.6.11",
+      "pluginSdkVersion": "2026.6.11",
+      "bundledDist": true
+    },
+    "release": {
+      "publishToClawHub": true,
+      "publishToNpm": true
+    }
+  }
+}
