@@ -40,5 +40,5 @@ npx clawhub package validate .
 ## Links
 
 - TokenLab: <https://tokenlab.sh>
-- TokenLab integration guide: <https://docs.tokenlab.sh/zh/guides/ide-sdk-compatibility>
+- TokenLab integration guide: <https://tokenlab.sh/docs/zh/guides/ide-sdk-compatibility>
 - OpenClaw provider plugin guide: <https://docs.openclaw.ai/plugins/sdk-provider-plugins>

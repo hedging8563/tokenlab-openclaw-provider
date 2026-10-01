@@ -20,7 +20,7 @@ const plugin: OpenClawPluginDefinition = defineSingleProviderPluginEntry({
   description: "TokenLab provider plugin with live model catalog discovery",
   provider: {
     label: "TokenLab",
-    docsPath: "https://docs.tokenlab.sh/zh/guides/ide-sdk-compatibility",
+    docsPath: "https://tokenlab.sh/docs/zh/guides/ide-sdk-compatibility",
     envVars: ["TOKENLAB_API_KEY"],
     auth: [
       {
