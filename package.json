@@ -1,6 +1,6 @@
 {
   "name": "@tokenlabai/openclaw-provider",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "TokenLab model provider plugin for OpenClaw with live model catalog discovery.",
   "type": "module",
   "license": "MIT",
